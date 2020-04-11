@@ -1,8 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
-	var numero = 1
-    fmt.Println("hello world")
+	dia := time.Now().Weekday()
+
+    fmt.Println("hello world! running on: ", dia)
 }
