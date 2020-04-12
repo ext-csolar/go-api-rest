@@ -11,14 +11,14 @@ import (
 
 type Person struct {
 	ID        string   `json:"id,omitempty"`
-	FirstName string   `json:"firstname,omitempty`
-	LastName  string   `json:"lastname,omitempty`
-	Address   *Address `json:"address,omitempty`
+	FirstName string   `json:"firstname,omitempty"`
+	LastName  string   `json:"lastname,omitempty"`
+	Address   *Address `json:"address,omitempty"`
 }
 
 type Address struct {
-	City  string `json:"city,omitempty`
-	State string `json:"state,omitempty`
+	City  string `json:"city,omitempty"`
+	State string `json:"state,omitempty"`
 }
 
 var people []Person
@@ -61,7 +61,7 @@ func DeletePersonEndpoint(res http.ResponseWriter, req *http.Request) {
 func main() {
 	dia := time.Now().Weekday()
 
-    log.Printf("hello world! running on: ", dia)
+    log.Printf("hello world! running on: %s", dia)
 
 	router := mux.NewRouter()
 
