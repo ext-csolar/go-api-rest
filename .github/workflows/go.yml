@@ -28,5 +28,8 @@ jobs:
             dep ensure
         fi
 
+    - name: Lint
+      run: go vet
+
     - name: Build
       run: go build -v .
